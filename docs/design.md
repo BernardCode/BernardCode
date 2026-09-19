@@ -6,9 +6,11 @@ The layout uses native GitHub text for project descriptions and links. Two origi
 
 ## Assets
 
-Run `python3 scripts/build_assets.py` from the repository root to regenerate the SVGs. Run the same command with `--check` to verify the committed assets. Python's standard library is the only dependency. CI checks generation; it never rewrites the profile or needs write access.
+Run `python3 scripts/build_assets.py` from the repository root to regenerate the SVGs. Run the same command with `--check` to verify the committed assets, local README links, and image alternative text. Python's standard library is the only dependency. CI checks generation; it never rewrites the profile or needs write access.
 
-Each illustration has a light, dark, narrow-light, and narrow-dark version selected by a `<picture>` element. Narrow versions rearrange the composition instead of shrinking desktop text. SVG text uses system fonts, with no font downloads, scripts, embedded HTML, raster images, or external resources. The ordinary image is the light-theme fallback.
+Each illustration has light, dark, narrow-light, and narrow-dark versions. GitHub's `#gh-light-mode-only` and `#gh-dark-mode-only` link hooks select the theme; a `<picture>` inside each link independently selects the narrow composition. This also handles an explicitly chosen GitHub theme that differs from the operating system. Combining theme and width in one source query does not work reliably: GitHub's `themed-picture` component rewrites theme queries and drops the width condition.
+
+Narrow versions rearrange the composition instead of shrinking desktop text. SVG text uses system fonts, with no font downloads, scripts, embedded HTML, raster images, or external resources. The desktop image is the fallback if picture source selection is unavailable. The theme hooks target GitHub; another Markdown viewer may show both theme versions.
 
 The header animation runs once for four seconds, only when `prefers-reduced-motion: no-preference` matches. Everything is visible before animation starts and after it finishes. Diagram content is static. If CSS animation is unavailable, the complete illustration remains visible.
 

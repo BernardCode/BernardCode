@@ -3,8 +3,10 @@
 
 import argparse
 import html
+from html.parser import HTMLParser
 from pathlib import Path
 import sys
+from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -202,6 +204,25 @@ def build():
                 yield ROOT / 'assets' / filename, content
 
 
+class ProfileLinks(HTMLParser):
+    """Check the local asset and documentation links in the README's HTML."""
+
+    def __init__(self):
+        super().__init__()
+        self.errors = []
+
+    def handle_starttag(self, tag, attrs):
+        values = dict(attrs)
+        if tag == 'img' and not values.get('alt', '').strip():
+            self.errors.append('Every profile image needs alternative text.')
+        for key in ('href', 'src', 'srcset'):
+            value = values.get(key, '')
+            refs = [part.strip().split()[0] for part in value.split(',') if part.strip()] if key == 'srcset' else [value]
+            for ref in refs:
+                if ref.startswith('./') and not (ROOT / urlsplit(ref).path).is_file():
+                    self.errors.append(f'Missing local file: {ref}')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true', help='Validate committed SVGs without changing them')
@@ -220,6 +241,12 @@ def main():
     if stale:
         print('Run python3 scripts/build_assets.py. Outdated assets: ' + ', '.join(stale), file=sys.stderr)
         return 1
+    if args.check:
+        links = ProfileLinks()
+        links.feed((ROOT / 'README.md').read_text())
+        if links.errors:
+            print('\n'.join(links.errors), file=sys.stderr)
+            return 1
     print(f"{'Verified' if args.check else 'Built'} 12 self-contained SVGs ({total:,} bytes total).")
     return 0
 

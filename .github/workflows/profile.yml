@@ -2,9 +2,9 @@ name: Check profile assets
 
 on:
   push:
-    paths: ['scripts/**', 'assets/**', '.github/workflows/profile.yml']
+    paths: ['README.md', 'docs/**', 'scripts/**', 'assets/**', '.github/workflows/profile.yml']
   pull_request:
-    paths: ['scripts/**', 'assets/**', '.github/workflows/profile.yml']
+    paths: ['README.md', 'docs/**', 'scripts/**', 'assets/**', '.github/workflows/profile.yml']
   workflow_dispatch:
 
 permissions:
