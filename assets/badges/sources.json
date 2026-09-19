@@ -1,0 +1,266 @@
+{
+  "generated": "2026-09-19",
+  "renderer": "https://shields.io/badges/static-badge",
+  "badges": [
+    {
+      "file": "python.svg",
+      "label": "Python",
+      "style": "for-the-badge",
+      "color": "3776AB",
+      "logo": "python",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white",
+      "sha256": "3d1a6d9ca441050d9969fd09b305f21174e2dbfcb6e982b085d32ca1eaaee909"
+    },
+    {
+      "file": "cplusplus.svg",
+      "label": "C++",
+      "style": "for-the-badge",
+      "color": "00599C",
+      "logo": "cplusplus",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white",
+      "sha256": "634c4967acc6e4655f31203177161e9efe3ec775e7e0184e3abfd17096962b60"
+    },
+    {
+      "file": "java.svg",
+      "label": "Java",
+      "style": "for-the-badge",
+      "color": "007396",
+      "logo": "devicon:java",
+      "logoColor": "white",
+      "source": "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/java/java-plain.svg",
+      "sha256": "742dac32437837fe428791640894c13d0a1d539fbf5df297aa5798567d55f59f"
+    },
+    {
+      "file": "javascript.svg",
+      "label": "JavaScript",
+      "style": "for-the-badge",
+      "color": "F7DF1E",
+      "logo": "javascript",
+      "logoColor": "20232A",
+      "source": "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=20232A",
+      "sha256": "88a8d0ac96c9a6d5b3bfee38baef657dedff6646fe01c558d2f9cd8baaad28f8"
+    },
+    {
+      "file": "typescript.svg",
+      "label": "TypeScript",
+      "style": "for-the-badge",
+      "color": "3178C6",
+      "logo": "typescript",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white",
+      "sha256": "7c939f140833aa8b45d4caafefa2e1cbba03eb9f871f935d286ad1920f9632ce"
+    },
+    {
+      "file": "html5.svg",
+      "label": "HTML5",
+      "style": "for-the-badge",
+      "color": "D64A25",
+      "logo": "html5",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/HTML5-D64A25?style=for-the-badge&logo=html5&logoColor=white",
+      "sha256": "4c55300d67e1d426ffe7fdb868d746fc83fd38043231387210ac1234810f7edf"
+    },
+    {
+      "file": "css.svg",
+      "label": "CSS",
+      "style": "for-the-badge",
+      "color": "1572B6",
+      "logo": "css",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css&logoColor=white",
+      "sha256": "40be5c968caca50bd0b226793501eefeae598e403fa9378c6039b4fc577a2ee1"
+    },
+    {
+      "file": "sql.svg",
+      "label": "SQL",
+      "style": "for-the-badge",
+      "color": "336791",
+      "logo": "postgresql",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white",
+      "sha256": "4a21f51cb63cd6ef52c90e60c9aaad88c0b57d04f90537207d5e17d04339b60e"
+    },
+    {
+      "file": "react.svg",
+      "label": "React",
+      "style": "for-the-badge",
+      "color": "20232A",
+      "logo": "react",
+      "logoColor": "61DAFB",
+      "source": "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
+      "sha256": "d731a19d89da0ff4017a3d8a973817dfb351f86a415cc5d12e4a0c3567a7b17b"
+    },
+    {
+      "file": "nextjs.svg",
+      "label": "Next.js",
+      "style": "for-the-badge",
+      "color": "111111",
+      "logo": "nextdotjs",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/Next.js-111111?style=for-the-badge&logo=nextdotjs&logoColor=white",
+      "sha256": "8a001c32909450152d5b86116cd8c682880f99cce5d21c7281adec4e4d4bf81a"
+    },
+    {
+      "file": "tailwindcss.svg",
+      "label": "Tailwind CSS",
+      "style": "for-the-badge",
+      "color": "0E596A",
+      "logo": "tailwindcss",
+      "logoColor": "38BDF8",
+      "source": "https://img.shields.io/badge/Tailwind%20CSS-0E596A?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8",
+      "sha256": "4bd35be7b746a53563ec4ea20de531214d35b7a2f006087752bf35581d687cb6"
+    },
+    {
+      "file": "postgresql.svg",
+      "label": "PostgreSQL",
+      "style": "for-the-badge",
+      "color": "336791",
+      "logo": "postgresql",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white",
+      "sha256": "163408327ec36d1a7dc9341c2e8095fbc915fac5e83ce536008bda4201888fdd"
+    },
+    {
+      "file": "supabase.svg",
+      "label": "Supabase",
+      "style": "for-the-badge",
+      "color": "1B4537",
+      "logo": "supabase",
+      "logoColor": "3ECF8E",
+      "source": "https://img.shields.io/badge/Supabase-1B4537?style=for-the-badge&logo=supabase&logoColor=3ECF8E",
+      "sha256": "db1f438dec955d9b8467ada61af369cfee9bfb7b60dc292d54299f57c2477b75"
+    },
+    {
+      "file": "mediapipe.svg",
+      "label": "MediaPipe",
+      "style": "for-the-badge",
+      "color": "007D8A",
+      "logo": "mediapipe",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/MediaPipe-007D8A?style=for-the-badge&logo=mediapipe&logoColor=white",
+      "sha256": "0072e6e3147344562aff3b02f88a3c26f957d0d969febf43fe28657f2050beaf"
+    },
+    {
+      "file": "scikit-learn.svg",
+      "label": "scikit-learn",
+      "style": "for-the-badge",
+      "color": "F7931E",
+      "logo": "scikitlearn",
+      "logoColor": "20232A",
+      "source": "https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=20232A",
+      "sha256": "e58d0599e0b7dc226993d18043c99fb3d24066443660269602a045a258a6ad06"
+    },
+    {
+      "file": "numpy.svg",
+      "label": "NumPy",
+      "style": "for-the-badge",
+      "color": "013243",
+      "logo": "numpy",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white",
+      "sha256": "8979be7bc443867e6d66c0544adf4eaef9ddfaeeff948ded0b67b53848b5f743"
+    },
+    {
+      "file": "pandas.svg",
+      "label": "pandas",
+      "style": "for-the-badge",
+      "color": "150458",
+      "logo": "pandas",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white",
+      "sha256": "0e336cd90396a1ce025c09b8768b3a090239771ef929e5b6285ee0b36092e252"
+    },
+    {
+      "file": "esp32.svg",
+      "label": "ESP32",
+      "style": "for-the-badge",
+      "color": "C92524",
+      "logo": "espressif",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/ESP32-C92524?style=for-the-badge&logo=espressif&logoColor=white",
+      "sha256": "9c60fc0087843be58eeb74a566bc8650acc8cb06fe0a68439d028b766c4d284e"
+    },
+    {
+      "file": "arduino.svg",
+      "label": "Arduino",
+      "style": "for-the-badge",
+      "color": "007C83",
+      "logo": "arduino",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/Arduino-007C83?style=for-the-badge&logo=arduino&logoColor=white",
+      "sha256": "29de125fab2ca6d41131d84917e8e206670919ae9283820146d6e5a4a4a85b96"
+    },
+    {
+      "file": "vitest.svg",
+      "label": "Vitest",
+      "style": "for-the-badge",
+      "color": "455D1F",
+      "logo": "vitest",
+      "logoColor": "C9EA86",
+      "source": "https://img.shields.io/badge/Vitest-455D1F?style=for-the-badge&logo=vitest&logoColor=C9EA86",
+      "sha256": "ed118e086a6438b5a8890f14f670c6118f4fec19ce80a27e940661211b307d28"
+    },
+    {
+      "file": "testing-library.svg",
+      "label": "Testing Library",
+      "style": "for-the-badge",
+      "color": "A72E32",
+      "logo": "testinglibrary",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/Testing%20Library-A72E32?style=for-the-badge&logo=testinglibrary&logoColor=white",
+      "sha256": "4884352acc5bb14c25eefe7134ade4b52fd2ed65af810e5989e4771cb43e4d48"
+    },
+    {
+      "file": "playwright.svg",
+      "label": "Playwright",
+      "style": "for-the-badge",
+      "color": "173323",
+      "logo": "devicon:playwright",
+      "logoColor": "white",
+      "source": "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/playwright/playwright-original.svg",
+      "sha256": "6811bdd505d2c8b4fa8a0f86e3827df030cc1de778f45c7a546c135a0c4e2a10"
+    },
+    {
+      "file": "pytest.svg",
+      "label": "pytest",
+      "style": "for-the-badge",
+      "color": "0A6D9C",
+      "logo": "pytest",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/pytest-0A6D9C?style=for-the-badge&logo=pytest&logoColor=white",
+      "sha256": "d1aba4dc1de71c48d25841390a615f70e4fa576c6a8e335b2981d1007871467c"
+    },
+    {
+      "file": "git.svg",
+      "label": "Git",
+      "style": "for-the-badge",
+      "color": "D4432B",
+      "logo": "git",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/Git-D4432B?style=for-the-badge&logo=git&logoColor=white",
+      "sha256": "0c0e9a468ae1cb5b7110240a662187dd381efc824318e3f24167987795ba8a67"
+    },
+    {
+      "file": "github-actions.svg",
+      "label": "GitHub Actions",
+      "style": "for-the-badge",
+      "color": "2088FF",
+      "logo": "githubactions",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white",
+      "sha256": "410f11cd2f5a704eb04bdbded75ff44cb2263eb241b8345f05eb288f6778d7a4"
+    },
+    {
+      "file": "vercel.svg",
+      "label": "Vercel",
+      "style": "for-the-badge",
+      "color": "111111",
+      "logo": "vercel",
+      "logoColor": "white",
+      "source": "https://img.shields.io/badge/Vercel-111111?style=for-the-badge&logo=vercel&logoColor=white",
+      "sha256": "231b8d1b5d74f99dac9f7fdb2b0f2c5d546c4af73296e0ada0e9ce9bf2c47677"
+    }
+  ]
+}

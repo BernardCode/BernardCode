@@ -2,8 +2,10 @@
 """Build the profile's original SVGs. Standard library only; no network requests."""
 
 import argparse
+import hashlib
 import html
 from html.parser import HTMLParser
+import json
 from pathlib import Path
 import sys
 from urllib.parse import urlsplit
@@ -252,6 +254,19 @@ def main():
     if args.check:
         links = ProfileLinks()
         links.feed((ROOT / 'README.md').read_text())
+        badge_dir = ROOT / 'assets' / 'badges'
+        manifest = json.loads((badge_dir / 'sources.json').read_text())
+        for badge in manifest['badges']:
+            path = badge_dir / badge['file']
+            if not path.is_file():
+                links.errors.append(f'Missing badge: {badge["file"]}')
+                continue
+            content = path.read_bytes()
+            ET.fromstring(content)
+            if hashlib.sha256(content).hexdigest() != badge['sha256']:
+                links.errors.append(f'Badge differs from its source record: {badge["file"]}')
+            total += len(content)
+            count += 1
         if links.errors:
             print('\n'.join(links.errors), file=sys.stderr)
             return 1

@@ -25,22 +25,57 @@
 
 ## Skills
 
-| Area | Languages & tools |
-| :--- | :--- |
-| Languages | [TypeScript](#manua), [JavaScript](https://github.com/BernardCode/FBLA-WEBSITE-CODING/tree/main/assets/js), [Python](#manua), [Java](#bobtutor), [C++](#knok-lok), [SQL](#located) |
-| Web | React, Next.js, HTML/CSS, Tailwind CSS |
-| Data & vision | PostgreSQL, Supabase, MediaPipe, scikit-learn, NumPy, pandas |
-| Embedded | ESP32, Arduino, sensor input, serial communication |
+### Languages
+
+<p>
+  <a href="#manua" title="Python: Manua training and evaluation pipeline"><img src="./assets/badges/python.svg" height="28" alt="Python"></a>
+  <a href="#knok-lok" title="C++: Knok Lok firmware"><img src="./assets/badges/cplusplus.svg" height="28" alt="C++"></a>
+  <a href="#bobtutor" title="Java: teaching at BOBTutor"><img src="./assets/badges/java.svg" height="28" alt="Java"></a>
+  <a href="https://github.com/BernardCode/FBLA-WEBSITE-CODING/tree/main/assets/js" title="JavaScript: browse public application code"><img src="./assets/badges/javascript.svg" height="28" alt="JavaScript"></a>
+  <a href="#manua" title="TypeScript: Manua web application"><img src="./assets/badges/typescript.svg" height="28" alt="TypeScript"></a>
+  <a href="https://github.com/BernardCode/FBLA-WEBSITE-CODING" title="HTML: browse the website source"><img src="./assets/badges/html5.svg" height="28" alt="HTML5"></a>
+  <a href="https://github.com/BernardCode/FBLA-WEBSITE-CODING" title="CSS: browse the website source"><img src="./assets/badges/css.svg" height="28" alt="CSS"></a>
+  <a href="#located" title="SQL: LocatED database and candidate retrieval"><img src="./assets/badges/sql.svg" height="28" alt="SQL"></a>
+</p>
+
+### Web & data
+
+<p>
+  <a href="#manua" title="React: Manua practice interface"><img src="./assets/badges/react.svg" height="28" alt="React"></a>
+  <a href="https://github.com/BernardCode/synthesis-hacks" title="Next.js: Synthesis Hacks website source"><img src="./assets/badges/nextjs.svg" height="28" alt="Next.js"></a>
+  <a href="#manua" title="Tailwind CSS: Manua interface styling"><img src="./assets/badges/tailwindcss.svg" height="28" alt="Tailwind CSS"></a>
+  <a href="#located" title="PostgreSQL: LocatED item data and search"><img src="./assets/badges/postgresql.svg" height="28" alt="PostgreSQL"></a>
+  <a href="#located" title="Supabase: LocatED database and storage"><img src="./assets/badges/supabase.svg" height="28" alt="Supabase"></a>
+</p>
+
+### ML & vision
+
+<p>
+  <a href="#manua" title="MediaPipe: on-device hand landmarks in Manua"><img src="./assets/badges/mediapipe.svg" height="28" alt="MediaPipe"></a>
+  <a href="#manua" title="scikit-learn: Manua model training and evaluation"><img src="./assets/badges/scikit-learn.svg" height="28" alt="scikit-learn"></a>
+  <a href="#manua" title="NumPy: Manua training data processing"><img src="./assets/badges/numpy.svg" height="28" alt="NumPy"></a>
+  <a href="#manua" title="pandas: Manua dataset preparation"><img src="./assets/badges/pandas.svg" height="28" alt="pandas"></a>
+</p>
+
+### Hardware
+
+<p>
+  <a href="#knok-lok" title="ESP32: Knok Lok microcontroller"><img src="./assets/badges/esp32.svg" height="28" alt="ESP32"></a>
+  <a href="https://github.com/DVeldhurthi/Knok_Lok/blob/main/Knok_Lok.ino" title="Arduino: read the Knok Lok sketch"><img src="./assets/badges/arduino.svg" height="28" alt="Arduino"></a>
+</p>
 
 <details>
 <summary>Testing & development workflow</summary>
 
-| Tools | Where I use them |
-| :--- | :--- |
-| Vitest & React Testing Library | Application logic and component behavior |
-| Playwright | Browser flows and end-to-end checks |
-| pytest | Data validation, preprocessing, and model-pipeline checks |
-| Git, GitHub Actions & Vercel | Version control, automated checks, and web deployments |
+<p>
+  <a href="#manua" title="Vitest: Manua application tests"><img src="./assets/badges/vitest.svg" height="28" alt="Vitest"></a>
+  <a href="#manua" title="Testing Library: Manua component tests"><img src="./assets/badges/testing-library.svg" height="28" alt="Testing Library"></a>
+  <a href="#manua" title="Playwright: Manua browser tests"><img src="./assets/badges/playwright.svg" height="28" alt="Playwright"></a>
+  <a href="#manua" title="pytest: Manua data and pipeline checks"><img src="./assets/badges/pytest.svg" height="28" alt="pytest"></a>
+  <a href="https://github.com/BernardCode/BernardCode/commits/main/" title="Git: profile repository history"><img src="./assets/badges/git.svg" height="28" alt="Git"></a>
+  <a href="https://github.com/BernardCode/BernardCode/actions" title="GitHub Actions: profile validation runs"><img src="./assets/badges/github-actions.svg" height="28" alt="GitHub Actions"></a>
+  <a href="https://manua-asl.vercel.app/demo" title="Vercel: open the deployed Manua walkthrough"><img src="./assets/badges/vercel.svg" height="28" alt="Vercel"></a>
+</p>
 
 </details>
 
