@@ -2,7 +2,9 @@
 
 The header pairs large, openly spaced name lettering with four blue ribbons that enter through the top edge and leave through the right. Opposite circular bends share their centers and use signed radius offsets, keeping the lanes evenly spaced through the entire turn. A soft light-blue highlight travels along the curves.
 
-The layout uses native GitHub text for project descriptions and links. Two original SVG diagrams expose the mechanisms inside the larger projects. They are schematics, not screenshots, benchmarks, or evidence of adoption. Smaller projects stay text-only so the page has a clear hierarchy.
+The layout follows a résumé hierarchy: skills, engineering projects, experience, and education. Languages link to relevant projects or public source; section navigation lets readers jump directly to the material they need. Five native disclosures expose testing tools, camera/model boundaries, matching logic, knock timing, and event delivery. These remain keyboard-accessible without JavaScript. Manua also links directly to separate learner and educator walkthroughs.
+
+Two original SVG diagrams expose the mechanisms inside the larger projects. They are schematics, not screenshots, benchmarks, or evidence of adoption. Leadership and teaching appear once, in experience. Education stays concise; no grades or unconfirmed dates are published.
 
 ## Assets
 
@@ -19,6 +21,8 @@ The palette uses deep navy, blue, and light blue across all three illustrations.
 ## Content boundaries
 
 Descriptions were checked against repository code and project records on September 19, 2026. Manua and LocatED have private source repositories, so the README does not send visitors to inaccessible code links. Manua's public walkthrough is a prototype. LocatED has not launched at school. No usage totals or model-accuracy figures are implied.
+
+The skills inventory is grounded in application dependencies, database migrations, the Python training package, public JavaScript and embedded source, and owner-confirmed teaching experience. It does not assign proficiency percentages or claim certifications. Tinovation, BOBTutor, Synthesis Hacks participation/support totals, and coursework use the owner's current records. Sponsor support includes credits and scholarships; it is not represented as cash alone. Unconfirmed role dates and tutoring roster totals are omitted.
 
 Manua's drawing separates camera calibration from the scripted word-feedback example in its public walkthrough. It does not depict a hand being translated into a word. The LocatED diagram separates candidate matching from ownership verification. Knok Lok is described as a rhythm-detection prototype, without claims about a working door actuator, notifications, or production security.
 
