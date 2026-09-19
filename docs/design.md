@@ -1,6 +1,6 @@
 # Behind the profile
 
-The visual identity is a lowercase b drawn as three routed circuit traces. A single signal travels through it when the header loads, then the graphic rests. It connects the web, vision, and hardware work without pretending to be a live dashboard.
+The header pairs large, openly spaced name lettering with four blue ribbons that enter through the top edge and leave through the right. Opposite circular bends share their centers and use signed radius offsets, keeping the lanes evenly spaced through the entire turn. A soft light-blue highlight travels along the curves.
 
 The layout uses native GitHub text for project descriptions and links. Two original SVG diagrams expose the mechanisms inside the larger projects. They are schematics, not screenshots, benchmarks, or evidence of adoption. Smaller projects stay text-only so the page has a clear hierarchy.
 
@@ -12,9 +12,9 @@ Each illustration has light, dark, narrow-light, and narrow-dark versions. GitHu
 
 Narrow versions rearrange the composition instead of shrinking desktop text. SVG text uses system fonts, with no font downloads, scripts, embedded HTML, raster images, or external resources. The desktop image is the fallback if picture source selection is unavailable. The theme hooks target GitHub; another Markdown viewer may show both theme versions.
 
-The header animation runs once for four seconds, only when `prefers-reduced-motion: no-preference` matches. Everything is visible before animation starts and after it finishes. Diagram content is static. If CSS animation is unavailable, the complete illustration remains visible.
+The header uses a seamless seven-second linear animation, only when `prefers-reduced-motion: no-preference` matches. Normalized path lengths coordinate a blurred halo, blue highlight, and pale core. The paths extend beyond the clipping area, so the light enters and exits at the card edges. The picture element also selects a separate static header for reduced motion, so this works even when a browser does not pass its motion preference into an embedded SVG. Unavailable CSS animation leaves the full blue illustration visible without movement. Diagram content is static.
 
-The palette uses blue-black, cool white, and a single mint accent. Text outside the illustrations inherits the reader's GitHub theme. Essential content also appears in image alternative text; the implementation notes use keyboard-accessible native disclosures.
+The palette uses deep navy, blue, and light blue across all three illustrations. Text outside the illustrations inherits the reader's GitHub theme. Essential content also appears in image alternative text; the implementation notes use keyboard-accessible native disclosures.
 
 ## Content boundaries
 

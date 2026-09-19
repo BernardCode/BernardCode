@@ -11,10 +11,10 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 PALETTES = {
-    "dark": dict(bg="#0d1117", panel="#111b22", ink="#edf4f7", muted="#9eafb9",
-                 line="#293840", accent="#75e1cc", faint="#163b38", white="#17252c"),
-    "light": dict(bg="#f6f9fa", panel="#ffffff", ink="#17282e", muted="#526870",
-                  line="#d9e4e7", accent="#087f70", faint="#dcefeb", white="#eef4f6"),
+    "dark": dict(bg="#0b1422", panel="#111f33", ink="#f3f8ff", muted="#a1b5d0",
+                 line="#283a55", accent="#68b9ff", faint="#16375b", white="#192b43"),
+    "light": dict(bg="#f3f8ff", panel="#ffffff", ink="#15294d", muted="#526a8c",
+                  line="#d6e3f5", accent="#1765ca", faint="#e0efff", white="#edf4fc"),
 }
 
 
@@ -32,14 +32,16 @@ def svg(w, h, theme, title, desc, content, animated=False):
     p = PALETTES[theme]
     colors = "\n".join(f".{name} {{ fill: {color}; }}" for name, color in p.items())
     animation = """
-    .trace { stroke-dasharray: 76 1100; stroke-dashoffset: 1176; opacity: 0; }
+    .beam { fill: none; stroke-linecap: round; opacity: 0; }
+    .beam-halo { stroke: #69c7ff; stroke-width: 22; stroke-dasharray: 170 830; --shift: 0px; filter: url(#bloom); }
+    .beam-light { stroke: #95daff; stroke-width: 8; stroke-dasharray: 90 910; --shift: -65px; filter: url(#soften); }
+    .beam-core { stroke: #e4f6ff; stroke-width: 3; stroke-dasharray: 32 968; --shift: -112px; }
     @media (prefers-reduced-motion: no-preference) {
-      .trace { animation: travel 4s ease-in-out 0.4s 1; }
+      .beam { opacity: 1; animation: current 7s linear infinite; }
     }
-    @keyframes travel {
-      0% { stroke-dashoffset: 1176; opacity: 0; }
-      15%, 80% { opacity: 1; }
-      100% { stroke-dashoffset: 0; opacity: 0; }
+    @keyframes current {
+      from { stroke-dashoffset: calc(1000px + var(--shift)); }
+      to { stroke-dashoffset: var(--shift); }
     }
     """ if animated else ""
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc">
@@ -47,7 +49,9 @@ def svg(w, h, theme, title, desc, content, animated=False):
   <desc id="desc">{html.escape(desc)}</desc>
   <defs>
     <radialGradient id="wash"><stop stop-color="{p['accent']}" stop-opacity=".14"/><stop offset="1" stop-color="{p['accent']}" stop-opacity="0"/></radialGradient>
-    <linearGradient id="wire" x1="0" y1="0" x2="1" y2="1"><stop stop-color="{p['accent']}"/><stop offset="1" stop-color="{p['muted']}" stop-opacity=".35"/></linearGradient>
+    <linearGradient id="wire" gradientUnits="userSpaceOnUse" x1="660" y1="0" x2="900" y2="340"><stop stop-color="#235da6"/><stop offset=".55" stop-color="#3f8ae0"/><stop offset="1" stop-color="#8dcfff"/></linearGradient>
+    <filter id="bloom" x="-30%" y="-40%" width="160%" height="180%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="soften" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation=".65"/></filter>
     <clipPath id="bounds"><rect width="{w}" height="{h}" rx="16"/></clipPath>
   </defs>
   <style>
@@ -68,42 +72,40 @@ def svg(w, h, theme, title, desc, content, animated=False):
 '''
 
 
-def monogram():
-    # A lowercase b drawn as three offset circuit traces, with routed terminals.
-    parts = ['<circle cx="194" cy="133" r="190" fill="url(#wash)"/>']
-    for n in range(3):
-        x, top, bottom = 131 + n * 11, 33 + n * 11, 234 - n * 11
-        d = (f"M 4 {top} H {x-24} Q {x} {top} {x} {top+24} V {bottom-47} "
-             f"Q {x} {bottom} 195 {bottom} H 210 Q {275-n*11} {bottom} {275-n*11} 171 "
-             f"Q {275-n*11} {111+n*11} 214 {111+n*11} H {x+37} "
-             f"Q {x+11} {111+n*11} {x+11} {137+n*5} V 165 "
-             f"Q {x+11} {186-n*4} 183 {186-n*4} H 325")
-        parts.append(f'<path d="{d}" fill="none" stroke="url(#wire)" stroke-width="1.4"/>')
-        if n == 1:
-            parts.append(f'<path d="{d}" class="signal trace"/>')
-        parts.append(f'<circle cx="4" cy="{top}" r="3" class="accent"/>')
-    parts.append('<circle cx="325" cy="182" r="4" class="accent"/>')
-    for x, y in [(68, 113), (302, 60), (68, 233), (305, 247)]:
-        parts.append(f'<path d="M{x-3} {y}h6 M{x} {y-3}v6" class="wire"/>')
+def ribbons(animated=True):
+    # Opposite bends share centers; signed radius offsets keep lanes 20px apart.
+    # Both ends extend past the crop, with no visible caps or loop reset.
+    parts = ['<ellipse cx="780" cy="184" rx="285" ry="255" fill="url(#wash)"/>']
+    paths = []
+    for offset in (-30, -10, 10, 30):
+        top_radius, turn_radius = 86 + offset, 68 - offset
+        d = (f'M {776 + offset} -100 V 52 '
+             f'A {top_radius} {top_radius} 0 0 1 690 {138 + offset} H 684 '
+             f'A {turn_radius} {turn_radius} 0 0 0 684 {274 - offset} H 1100')
+        paths.append(d)
+        parts.append(f'<path d="{d}" fill="none" stroke="url(#wire)" stroke-width="8"/>')
+    # Wide bloom, blue body, then a pale core form one soft traveling highlight.
+    if animated:
+        for layer in ('halo', 'light', 'core'):
+            for d in paths:
+                parts.append(f'<path d="{d}" pathLength="1000" class="beam beam-{layer}"/>')
     return "".join(parts)
 
 
-def hero(theme, mobile):
+def hero(theme, mobile, animated=True):
     if mobile:
-        w, h = 480, 310
-        content = (f'<g transform="translate(230 10) scale(.85)" opacity=".30">{monogram()}</g>'
-                   + text(30, 46, "BERNARDCODE", 13, "muted", 500, 'letter-spacing="2"')
-                   + text(27, 126, "Bernard", 68, weight=650, extra='letter-spacing="-3.5"')
-                   + text(27, 201, "Freund.", 68, weight=650, extra='letter-spacing="-3.5"')
-                   + text(30, 265, "Student developer · Bay Area", 20, "muted"))
+        w, h = 480, 320
+        content = (f'<g transform="translate(-30 0) scale(.65)">{ribbons(animated)}</g>'
+                   + text(27, 113, "Bernard", 80, weight=650, extra='letter-spacing=".5"')
+                   + text(27, 211, "Freund", 80, weight=650, extra='letter-spacing=".5"')
+                   + text(30, 278, "Student developer · Bay Area", 20, "muted"))
     else:
         w, h = 960, 340
-        content = (f'<g transform="translate(575 28)">{monogram()}</g>'
-                   + text(44, 52, "BERNARDCODE", 13, "muted", 500, 'letter-spacing="2.5"')
-                   + text(39, 144, "Bernard", 84, weight=650, extra='letter-spacing="-4.5"')
-                   + text(39, 235, "Freund.", 84, weight=650, extra='letter-spacing="-4.5"')
-                   + text(44, 293, "Student developer · Bay Area", 21, "muted"))
-    return svg(w, h, theme, "Bernard Freund", "Student developer in the Bay Area. Three circuit traces form a lowercase b. A signal passes through once, then rests.", content, True)
+        content = (ribbons(animated)
+                   + text(39, 133, "Bernard", 110, weight=650, extra='letter-spacing=".8"')
+                   + text(39, 256, "Freund", 110, weight=650, extra='letter-spacing=".8"')
+                   + text(44, 309, "Student developer · Bay Area", 21, "muted"))
+    return svg(w, h, theme, "Bernard Freund", "Student developer in the Bay Area. Four evenly spaced blue ribbons sweep beyond the card edges.", content, animated)
 
 
 HAND = [(87,174),(55,149),(34,117),(17,93),(4,72),
@@ -202,6 +204,10 @@ def build():
                 filename = f"{name}{'-mobile' if mobile else ''}-{theme}.svg"
                 content = '\n'.join(line.rstrip() for line in render(theme, mobile).splitlines()) + '\n'
                 yield ROOT / 'assets' / filename, content
+                if name == 'hero':
+                    static = render(theme, mobile, animated=False)
+                    content = '\n'.join(line.rstrip() for line in static.splitlines()) + '\n'
+                    yield ROOT / 'assets' / filename.replace('.svg', '-static.svg'), content
 
 
 class ProfileLinks(HTMLParser):
@@ -229,9 +235,11 @@ def main():
     args = parser.parse_args()
     stale = []
     total = 0
+    count = 0
     for path, content in build():
         ET.fromstring(content)
         total += len(content.encode())
+        count += 1
         if args.check:
             if not path.exists() or path.read_text() != content:
                 stale.append(str(path.relative_to(ROOT)))
@@ -247,7 +255,7 @@ def main():
         if links.errors:
             print('\n'.join(links.errors), file=sys.stderr)
             return 1
-    print(f"{'Verified' if args.check else 'Built'} 12 self-contained SVGs ({total:,} bytes total).")
+    print(f"{'Verified' if args.check else 'Built'} {count} self-contained SVGs ({total:,} bytes total).")
     return 0
 
 

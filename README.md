@@ -1,11 +1,15 @@
 <a href="./assets/hero-dark.svg#gh-dark-mode-only">
   <picture>
+    <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="./assets/hero-mobile-dark-static.svg">
+    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/hero-dark-static.svg">
     <source media="(max-width: 600px)" srcset="./assets/hero-mobile-dark.svg">
     <img src="./assets/hero-dark.svg" width="100%" alt="Bernard Freund. Student developer in the Bay Area.">
   </picture>
 </a>
 <a href="./assets/hero-light.svg#gh-light-mode-only">
   <picture>
+    <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="./assets/hero-mobile-light-static.svg">
+    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/hero-light-static.svg">
     <source media="(max-width: 600px)" srcset="./assets/hero-mobile-light.svg">
     <img src="./assets/hero-light.svg" width="100%" alt="Bernard Freund. Student developer in the Bay Area.">
   </picture>
@@ -13,8 +17,7 @@
 
 <p>
   <a href="mailto:bernard.w.freund@gmail.com">Email</a> &nbsp; / &nbsp;
-  <a href="https://www.linkedin.com/in/bernard-freund-753b0b288/">LinkedIn</a> &nbsp; / &nbsp;
-  <a href="https://github.com/BernardCode?tab=repositories">All repositories</a>
+  <a href="https://www.linkedin.com/in/bernard-freund-753b0b288/">LinkedIn</a>
 </p>
 
 ## Manua
@@ -86,5 +89,3 @@ A knock-pattern prototype built with an ESP32 and a sound sensor. The C++ firmwa
 ---
 
 Away from these builds: competitive programming, currently USACO Silver.
-
-<sub>Manua and LocatED have private source. <a href="./docs/design.md">How this profile is built</a>.</sub>
