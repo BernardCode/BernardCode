@@ -1,17 +1,17 @@
 <a href="./assets/hero-dark.svg#gh-dark-mode-only">
   <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="./assets/hero-mobile-dark-static.svg">
-    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/hero-dark-static.svg">
-    <source media="(max-width: 600px)" srcset="./assets/hero-mobile-dark.svg">
-    <img src="./assets/hero-dark.svg" width="100%" alt="Bernard Freund. Student developer in the Bay Area.">
+    <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="./assets/hero-mobile-dark-static.svg?v=blue-ribbons">
+    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/hero-dark-static.svg?v=blue-ribbons">
+    <source media="(max-width: 600px)" srcset="./assets/hero-mobile-dark.svg?v=blue-ribbons">
+    <img src="./assets/hero-dark.svg?v=blue-ribbons" width="100%" alt="Bernard Freund. Student developer in the Bay Area.">
   </picture>
 </a>
 <a href="./assets/hero-light.svg#gh-light-mode-only">
   <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="./assets/hero-mobile-light-static.svg">
-    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/hero-light-static.svg">
-    <source media="(max-width: 600px)" srcset="./assets/hero-mobile-light.svg">
-    <img src="./assets/hero-light.svg" width="100%" alt="Bernard Freund. Student developer in the Bay Area.">
+    <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="./assets/hero-mobile-light-static.svg?v=blue-ribbons">
+    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/hero-light-static.svg?v=blue-ribbons">
+    <source media="(max-width: 600px)" srcset="./assets/hero-mobile-light.svg?v=blue-ribbons">
+    <img src="./assets/hero-light.svg?v=blue-ribbons" width="100%" alt="Bernard Freund. Student developer in the Bay Area.">
   </picture>
 </a>
 
@@ -26,14 +26,14 @@ I'm developing a browser-based fingerspelling practice app. Adaptive review help
 
 <a href="https://manua-asl.vercel.app/demo#gh-dark-mode-only">
   <picture>
-    <source media="(max-width: 600px)" srcset="./assets/manua-mobile-dark.svg">
-    <img src="./assets/manua-dark.svg" width="100%" alt="Two separate parts of Manua: on-device hand landmarks and a scripted practice example comparing MARTEN with MARTIN.">
+    <source media="(max-width: 600px)" srcset="./assets/manua-mobile-dark.svg?v=blue-ribbons">
+    <img src="./assets/manua-dark.svg?v=blue-ribbons" width="100%" alt="Two separate parts of Manua: on-device hand landmarks and a scripted practice example comparing MARTEN with MARTIN.">
   </picture>
 </a>
 <a href="https://manua-asl.vercel.app/demo#gh-light-mode-only">
   <picture>
-    <source media="(max-width: 600px)" srcset="./assets/manua-mobile-light.svg">
-    <img src="./assets/manua-light.svg" width="100%" alt="Two separate parts of Manua: on-device hand landmarks and a scripted practice example comparing MARTEN with MARTIN.">
+    <source media="(max-width: 600px)" srcset="./assets/manua-mobile-light.svg?v=blue-ribbons">
+    <img src="./assets/manua-light.svg?v=blue-ribbons" width="100%" alt="Two separate parts of Manua: on-device hand landmarks and a scripted practice example comparing MARTEN with MARTIN.">
   </picture>
 </a>
 
@@ -52,14 +52,14 @@ A school lost-and-found platform I co-built with Jerry Li, from item reports and
 
 <a href="https://locateed.vercel.app/#gh-dark-mode-only">
   <picture>
-    <source media="(max-width: 600px)" srcset="./assets/located-mobile-dark.svg">
-    <img src="./assets/located-dark.svg" width="100%" alt="Matching pipeline: text, visual description, recency, location, and category feed candidate ranking. A suggested match still needs a verified claim.">
+    <source media="(max-width: 600px)" srcset="./assets/located-mobile-dark.svg?v=blue-ribbons">
+    <img src="./assets/located-dark.svg?v=blue-ribbons" width="100%" alt="Matching pipeline: text, visual description, recency, location, and category feed candidate ranking. A suggested match still needs a verified claim.">
   </picture>
 </a>
 <a href="https://locateed.vercel.app/#gh-light-mode-only">
   <picture>
-    <source media="(max-width: 600px)" srcset="./assets/located-mobile-light.svg">
-    <img src="./assets/located-light.svg" width="100%" alt="Matching pipeline: text, visual description, recency, location, and category feed candidate ranking. A suggested match still needs a verified claim.">
+    <source media="(max-width: 600px)" srcset="./assets/located-mobile-light.svg?v=blue-ribbons">
+    <img src="./assets/located-light.svg?v=blue-ribbons" width="100%" alt="Matching pipeline: text, visual description, recency, location, and category feed candidate ranking. A suggested match still needs a verified claim.">
   </picture>
 </a>
 
